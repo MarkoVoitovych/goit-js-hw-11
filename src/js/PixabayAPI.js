@@ -1,4 +1,4 @@
-import axios from "axios";
+import axios from 'axios';
 
 axios.defaults.baseURL = 'https://pixabay.com';
 
@@ -14,7 +14,7 @@ export class PixabayAPI {
     }
 
     async getPhotos() {
-        const params = {
+        const params = new URLSearchParams({
             key: this.#API_KEY,
             q: this.#query,
             image_type: 'photo',
@@ -22,11 +22,9 @@ export class PixabayAPI {
             safesearch: 'true',
             per_page: this.#perPage,
             page: this.#page,
-        };
+        });
         const { data } = await axios.get('/api', { params });
         return data;
-
-
     }
     get query() {
         return this.#query;
