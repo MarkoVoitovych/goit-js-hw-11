@@ -23,8 +23,9 @@ export class PixabayAPI {
             per_page: this.#perPage,
             page: this.#page,
         });
-        const { data } = await axios.get('/api', { params });
+        const { data } = await axios.get('/api/', { params });
         return data;
+
     }
     get query() {
         return this.#query;
