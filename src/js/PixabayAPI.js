@@ -9,7 +9,7 @@ export class PixabayAPI {
     #perPage = 1;
     #API_KEY = '31446956-3401e915dba4e7bdf39ba13d6';
 
-    constructor({ perPage = 10 } = {}) {
+    constructor({ perPage = 40 } = {}) {
         this.#perPage = perPage;
     }
 
