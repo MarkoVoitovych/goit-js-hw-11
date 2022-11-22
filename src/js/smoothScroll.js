@@ -4,7 +4,7 @@ export function smoothScroll() {
         .firstElementChild.getBoundingClientRect();
 
     window.scrollBy({
-        top: cardHeight * 1,
+        top: cardHeight * 2,
         behavior: "smooth",
     });
 }
